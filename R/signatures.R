@@ -1,3 +1,12 @@
+##' Get signatures for a petitions
+##'
+##' .. content for \details{} ..
+##' @title Get Signatures 
+##' @param id the petition id
+##' @param page_size number of signatures to get
+##' @param page starting signature, in units of page size
+##' @return data frame of signatures, with some extra info in the "meta" attribute
+##' @author Barry Rowlingson
 getSignatures <- function(id,page_size,page){
   apikey=getAPIkey()
   apiroot=getAPIroot()
@@ -18,7 +27,16 @@ getSignatures <- function(id,page_size,page){
   m
   
 }
-
+##' Get many pages of signatures
+##'
+##' To get more than one page of signatures, use this.
+##' @title Get Pages of signatures
+##' @param id petition id
+##' @param pages page numbers
+##' @param page_size number of signatures in each page
+##' @param progress progress indicator, "none", "text", or "tk"
+##' @return a data frame of signature info
+##' @author Barry Rowlingson
 getSignaturePages <- function(id,pages,page_size,progress="text"){
   ldply(pages,
         function(page){getSignatures(id,page=page,page_size=page_size)},
