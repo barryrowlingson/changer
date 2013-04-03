@@ -19,3 +19,9 @@ getSignatures <- function(id,page_size,page){
   
 }
 
+getSignaturePages <- function(id,pages,page_size,progress="text"){
+  ldply(pages,
+        function(page){getSignatures(id,page=page,page_size=page_size)},
+        .progress=progress
+        )
+}
