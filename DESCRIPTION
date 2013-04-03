@@ -5,6 +5,10 @@ Version: 1.0
 License: GPL-3
 Title: 
 Description: 
+Depends:
+    devtools,
+    RCurl,
+    rjson
 Suggests:
     testthat,
     roxygen2
