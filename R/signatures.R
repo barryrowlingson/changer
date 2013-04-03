@@ -1,7 +1,13 @@
-getSignatures <- function(id){
+getSignatures <- function(id,page_size,page){
   apikey=getAPIkey()
   apiroot=getAPIroot()
   url=paste0(apiroot,id,"/signatures?api_key=",apikey,sep="")
+  if(!missing(page_size)){
+    url=paste0(url,"&page_size=",page_size,sep="")
+  }
+  if(!missing(page)){
+    url=paste0(url,"&page=",page,sep="")
+  }
   response = getURL(url)
   json = fromJSON(response)
   sigs = json$signatures
