@@ -8,9 +8,14 @@ Description:
 Depends:
     devtools,
     RCurl,
-    rjson
+    rjson,
+    plyr
 Suggests:
     testthat,
     roxygen2
 Collate:
     'changer-package.r'
+    'api.R'
+    'getID.R'
+    'key.R'
+    'signatures.R'

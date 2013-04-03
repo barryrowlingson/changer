@@ -1,6 +1,5 @@
 ##' Get signatures for a petitions
 ##'
-##' .. content for \details{} ..
 ##' @title Get Signatures 
 ##' @param id the petition id
 ##' @param page_size number of signatures to get
