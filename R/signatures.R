@@ -29,6 +29,7 @@ getSignatures <- function(id,page_size,page){
   sigs = json$signatures
   non.null.list <- lapply(sigs, Filter, f = Negate(is.null))
   m = rbind.fill(lapply(non.null.list, as.data.frame))
+  m$signed_at = as.POSIXct( strptime( m$signed_at, "%Y-%m-%dT%H:%M:%SZ"))
   atts=json[c("page","prev_page_endpoint","next_page_endpoint","total_pages","signature_count")]
   attr(m,"meta")=atts
   m
