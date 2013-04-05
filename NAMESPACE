@@ -1,0 +1,6 @@
+export(getAPIkey)
+export(getAPIroot)
+export(getID)
+export(getSignaturePages)
+export(getSignatures)
+export(setAPIkey)
