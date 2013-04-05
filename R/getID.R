@@ -5,6 +5,7 @@
 ##' @param url The URL of the petition on www.change.org
 ##' @return a list with "petition_id" component that has the petition id,
 ##' and "result" component with the status string.
+##' @export
 ##' @author Barry Rowlingson
 getID <- function(url){
   apikey=getAPIkey()
