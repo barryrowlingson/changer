@@ -18,6 +18,15 @@
 \description{
   Get signatures for a petitions
 }
+\examples{
+\dontrun{
+setAPIkey("insertyourAPIkeyhere")
+id = getID("http://www.change.org/en-GB/petitions/michael-gove-keep-climate-change-in-the-curriculum")
+pid = id$petition_id
+sigs = getSignatures(pid, 10, 1)
+head(sigs)
+}
+}
 \author{
   Barry Rowlingson
 }

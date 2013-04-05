@@ -6,6 +6,13 @@
 ##' @param page starting signature, in units of page size
 ##' @return data frame of signatures, with some extra info in the "meta" attribute
 ##' @export
+##' @examples \dontrun{
+##' setAPIkey("insertyourAPIkeyhere")
+##' id = getID("http://www.change.org/en-GB/petitions/michael-gove-keep-climate-change-in-the-curriculum")
+##' pid = id$petition_id
+##' sigs = getSignatures(pid, 10, 1)
+##' head(sigs)
+##' }
 ##' @author Barry Rowlingson
 getSignatures <- function(id,page_size,page){
   apikey=getAPIkey()
