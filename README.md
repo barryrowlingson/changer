@@ -5,6 +5,19 @@ Interface to www.change.org API.
 
 Current functionality is reading signatures from petitions.
 
+Install via
+
+```
+require(devtools)
+install_github("changer","barryrowlingson")
+```
+
+Make sure you have the dependencies
+
+```
+install.packages(c("RCurl","rjson","plyr"))
+```
+
 First sign up on www.change.org and get an API key. This is a long hexadecimal string.
 
 Then you can do
