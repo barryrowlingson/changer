@@ -1,10 +1,10 @@
 Package: changer
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Author: rowlings
+Maintainer: Barry Rowlingson <b.rowlingson@gmail.com>
+Author: Barry Rowlingson
 Version: 1.0
 License: GPL-3
-Title: 
-Description: 
+Title: Interface to www.change.org API
+Description: Get signatures from petitions on the www.change.org site.
 Depends:
     devtools,
     RCurl,
