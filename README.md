@@ -1,7 +1,7 @@
 changer
 =======
 
-Interface to www.change.org API.
+An R interface to the www.change.org online petition site API.
 
 Current functionality is reading signatures from petitions.
 
