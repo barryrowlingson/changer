@@ -5,6 +5,7 @@
 ##' @param page_size number of signatures to get
 ##' @param page starting signature, in units of page size
 ##' @return data frame of signatures, with some extra info in the "meta" attribute
+##' @export
 ##' @author Barry Rowlingson
 getSignatures <- function(id,page_size,page){
   apikey=getAPIkey()
@@ -35,6 +36,7 @@ getSignatures <- function(id,page_size,page){
 ##' @param page_size number of signatures in each page
 ##' @param progress progress indicator, "none", "text", or "tk"
 ##' @return a data frame of signature info
+##' @export
 ##' @author Barry Rowlingson
 getSignaturePages <- function(id,pages,page_size,progress="text"){
   ldply(pages,
